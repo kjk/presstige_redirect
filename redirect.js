@@ -45,7 +45,7 @@ function redirect() {
         newURL = "https://www.notion.so/" + newPath
     }
     console.log("redirecting to: ", newURL);
-    //window.location = newURL;
+    window.location = newURL;
 }
 
 redirect();
