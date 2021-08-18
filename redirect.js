@@ -15,7 +15,7 @@ var myPages = [
 ];
 
 function myPageRedirect(pageID) {
-    var n = myPages.length / 2;
+    var n = myPages.length;
     for (var i = 0; i < n; i += 2) {
         var p = myPages[i];
         if (p == pageID) {
@@ -40,6 +40,7 @@ function redirect() {
     var newPath = pathname.substr("/p/".length);
     var parts = newPath.split("-");
     var pageID = parts[parts.length-1];
+    console.log("pageID: ", pageID);
     var newURL = myPageRedirect(pageID);
     if (newURL == null) {
         newURL = "https://www.notion.so/" + newPath
